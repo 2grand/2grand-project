@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2Grand | Home</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+
+  <div class="header">
+    <h1>2Grand</h1>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+    </nav>
+  </div>
+
+  <div class="hero">
+    <video autoplay loop muted playsinline>
+      <source src="hero-video.mp4" type="video/mp4"/>
+    </video>
+    <h2>Welcome to My Personal Site</h2>
+    <div id="welcomeMessage"></div>
+    <button id="listenNowBtn" class="listen-now-btn">Listen Now</button>
+  </div>
+
+  <div id="bio" class="bio">
+    <h3>About Me</h3>
+    <p>Music lover with deep roots in Motown and New York hip-hop. Raised in Ghana, I bring a global perspective to my sound. I collect vinyl records, follow sports passionately, and work hard to balance creativity with discipline.</p>
+  </div>
+
+  <div id="favorites" class="favorites">
+    <h3>My Favorite Media</h3>
+    <table>
+      <tr>
+        <th>Music</th>
+        <th>Movies</th>
+        <th>TV Shows</th>
+      </tr>
+      <tr>
+        <td>Mach-Hommy</td>
+        <td>Interstellar</td>
+        <td>Breaking Bad</td>
+      </tr>
+      <tr>
+        <td>Earl Sweatshirt</td>
+        <td>Scarface</td>
+        <td>The Wire</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="artists" class="favorite-artists-section">
+    <h3>Favorite Artists</h3>
+    <div class="artist-grid">
+      <a href="mach-hommy.html" class="artist-card">
+        <img src="images/mach-hommy.jpg" alt="Mach-Hommy">
+        <span>Mach-Hommy</span>
+      </a>
+      <a href="earl-sweatshirt.html" class="artist-card">
+        <img src="images/earl-sweatshirt.jpg" alt="Earl Sweatshirt">
+        <span>Earl Sweatshirt</span>
+      </a>
+      <a href="westside-gunn.html" class="artist-card">
+        <img src="images/westside-gunn.jpg" alt="Westside Gunn">
+        <span>Westside Gunn</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="media">
+    <h3>Gallery</h3>
+    <div class="carousel">
+      <img src="album-cover.jpg" alt="Album Cover" />
+      <img src="personal-photo.jpg" alt="Personal Photo" />
+    </div>
+    <div class="carousel-controls">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+
+  <div id="music" class="audio-player">
+    <h3>Unreleased Gems</h3>
+    <p id="songTitle" style="font-weight: bold; margin-bottom: 10px;"></p>
+    <div id="waveform" style="margin-bottom: 10px;"></div>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <button id="playButton" class="listen-now-btn"><i class="fas fa-play"></i></button>
+      <span id="progressTime">0:00</span> / <span id="durationTime">1:56</span>
+    </div>
+    <label for="volumeSlider" style="margin-top: 10px;">Volume:</label>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 2Grand</p>
+    <a href="https://instagram.com/2grand_" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+</body>
+</html>

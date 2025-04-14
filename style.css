@@ -1,0 +1,410 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  /* Header & Navigation */
+  .header, .footer {
+    background-color: #1c1c1c;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .nav a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav a:hover {
+    color: #e63946;
+  }
+  
+  /* Back to Home Link */
+  .back-link {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  
+  .back-link a {
+    display: inline-block;
+    color: #e63946;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #e63946;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .back-link a:hover {
+    background-color: #e63946;
+    color: #ffffff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  
+  .hero h2,
+  .hero #welcomeMessage,
+  .listen-now-btn {
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  /* Listen Now Button */
+  .listen-now-btn {
+    margin-top: 20px;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #2c2f35, #1a1d22);
+    color: #e63946;
+    border: 2px solid #e63946;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .listen-now-btn:hover {
+    background: #e63946;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+  }
+  
+  /* Section Containers */
+  .bio, .classes, .favorites, .media, .audio-player, .artist-letter {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+  }
+  
+  /* Artist Video Fade & Hover Sound */
+  .artist-profile video {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    transition: opacity 1s ease-in-out;
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  /* Letter from the Artist */
+  .artist-letter h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e63946;
+  }
+  
+  .artist-letter p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+  
+  /* Favorites Table */
+  .favorites table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .favorites th, .favorites td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* Supreme-style Artist Grid */
+  .favorite-artists-section h3 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .artist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .artist-card {
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .artist-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+  
+  .artist-card span {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .artist-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Carousel */
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
+    border-radius: 6px;
+  }
+  
+  .carousel-controls {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-controls button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-controls button:hover {
+    background-color: #a62834;
+  }
+  
+  /* Audio Player */
+  .audio-player {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 700px;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+  }
+  
+  #waveform {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  #progressTime, #durationTime {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e63946;
+    margin: 0 5px;
+  }
+  
+  #audio-player label,
+  .audio-player label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  #volumeSlider {
+    width: 200px;
+    margin-top: 5px;
+    background: #e63946;
+    height: 4px;
+    appearance: none;
+    outline: none;
+    border-radius: 3px;
+    accent-color: #e63946;
+  }
+  
+  #volumeSlider::-webkit-slider-thumb,
+  #volumeSlider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 2px solid #e63946;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Artist Bio Layout */
+  .artist-profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .artist-profile img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .artist-profile .bio {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  /* Album Gallery */
+  .album-gallery {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+  }
+  
+  .album-gallery h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .album-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .album-item {
+    text-align: center;
+  }
+  
+  .album-item img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .album-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .album-item span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  /* Footer */
+  .footer a {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer a:hover {
+    color: #e63946;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav a {
+      margin: 0 5px;
+    }
+  
+    .hero {
+      height: 250px;
+    }
+  
+    #volumeSlider {
+      width: 150px;
+    }
+  
+    .artist-card {
+      width: 45%;
+    }
+  
+    .artist-profile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .artist-profile img,
+    .artist-profile video {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+  
+    .artist-profile .bio {
+      padding-top: 15px;
+    }
+  }
+  
